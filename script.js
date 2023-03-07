@@ -1,9 +1,13 @@
-const dropdownTrigger = document.querySelector('.dropdown-trigger'); 
+const menuTitle = document.querySelector('.menu-title');  
 
-dropdownTrigger.addEventListener('click', () => {
-    expandMenu();
+menuTitle.addEventListener('click', () => {
+    changeMenu();
 });
 
-const expandMenu = () => {
-    
+const changeMenu = () => {
+    let menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach((item) => {
+        item.classList.toggle('hidden');
+        item.classList.toggle('active');
+    })
 }
